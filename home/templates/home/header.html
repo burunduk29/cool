@@ -13,6 +13,6 @@
     {% if request.user.is_anonymous %}
         <div><a href="/login">Войти</a></div>
     {% else %}
-        <div><a href="/logout">Выйти</a></div>
+        <div><a href="{% url 'logout' %}">Выйти</a></div>
     {% endif %}
 </header>
