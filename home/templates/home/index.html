@@ -1,15 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">
-    <title>Cool shop</title>
-</head>
-<body>
-    {% include 'home/header.html' %}
+{% extends 'home/base.html' %}
+{% block title %} CoolShop - Главная страница {%endblock%}
+{% block content %}
+
     <div>
         <h1>Крутой магазин так-то так-то!</h1>
     </div>
-</body>
-</html>
+{% endblock %}

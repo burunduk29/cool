@@ -1,15 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">
-    <link rel="stylesheet" href="{% static 'catalog/style.css' %}">
-    <title>Авторизация</title>
-</head>
-<body>
-    {% include 'home/header.html' %}
+{% extends 'home/base.html' %}
+{% block title %} CoolShop - Главная страница {%endblock%}
+
+{% block content %}
+    <h1>Авторизация</h1>
+
     <div class="login-form">
         <form action="/login/" method="POST">
             {% csrf_token %}
@@ -18,5 +12,4 @@
             <button type="submit">Войти</button>
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
