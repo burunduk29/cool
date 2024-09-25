@@ -1,0 +1,16 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}Cool shop {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    {% block head%}
+<!--    <link rel="stylesheet" href="">-->
+    {% endblock %}
+</head>
+<body>
+    {% include 'home/header.html' %}
+    {% block content %}{% endblock %}
+</body>
+</html>
