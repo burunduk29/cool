@@ -15,3 +15,6 @@ def product(request: HttpRequest, product_id:int) -> HttpResponse:
     context = {'product':product}
 
     return render(request, 'catalog/product.html', context)
+
+def cart(request :HttpRequest) -> HttpResponse:
+    return render(request, 'catalog/cart.html')
