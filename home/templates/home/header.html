@@ -8,6 +8,12 @@
             <li class="{% if request.path == '/catalog' %} active {% endif %}">
                 <a href="/catalog">Каталог</a>
             </li>
+            <li>
+            <a href="/cart" class="cart-button">
+                КОРЗИНА
+                <span class="cart-count">0</span>
+            </a>
+        </li>
         </ul>
     </nav>
     {% if request.user.is_anonymous %}
